@@ -1,0 +1,29 @@
+{
+  "name": "ts-dojo-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate project to quick start your typescript dojo",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "jasmine:watch": "jasmine-node dist/spec --autotest --watch dist",
+    "compile": "tsc",
+    "compile:watch": "tsc -w",
+    "test:watch": "concurrently --kill-others \"npm run compile:watch\" \"npm run jasmine:watch\"",
+    "lint": "tslint -c tslint.json 'src/**/*.ts' 'spec/**/*.ts'",
+    "postinstall": "npm run compile"
+  },
+  "author": "alxlchnr",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.17",
+    "@types/lodash": "^4.14.165",
+    "@types/node": "^14.14.14",
+    "concurrently": "^4.1.2",
+    "jasmine": "^3.6.3",
+    "jasmine-node": "^1.16.2",
+    "jasmine-ts-console-reporter": "^3.1.1",
+    "lodash": "^4.17.20",
+    "tslint": "^5.20.1",
+    "typescript": "^4.1.3"
+  }
+}
